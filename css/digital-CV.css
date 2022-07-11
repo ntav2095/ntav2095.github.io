@@ -1,0 +1,165 @@
+:root {
+  --blue-color: blue;
+  --white-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+ul, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.digital-cv {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.digital-cv .main {
+  margin-top: 32px;
+  padding: 20px;
+  background: var(--blue-color);
+  border: 1px solid #000;
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    'cvItem1 cvItem1 cvItem3 cvItem5'
+    'cvItem2 cvItem2 cvItem4 cvItem5';
+}
+
+
+
+.cvItem1 {
+  grid-area: cvItem1;
+}
+
+.cvItem2 {
+  grid-area: cvItem2;
+}
+
+.cvItem3 {
+  grid-area: cvItem3;
+}
+
+.cvItem4 {
+  grid-area: cvItem4;
+}
+
+.cvItem5 {
+  grid-area: cvItem5;
+}
+
+h2 {
+  color: var(--blue-color);
+  text-transform: capitalize;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+}
+
+.cvItem {
+  background: var(--white-color);
+  padding: 16px;
+}
+
+.cvItem h2 {
+  color: var(--blue-color);
+  text-transform: capitalize;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+  padding: 16px 0;
+  padding-top: 0;
+}
+
+.cvItem h3 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.cvItem li {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  padding-left: 0;
+}
+
+.cvItem li i {
+  padding: 0 32px;
+  font-size: 18px;
+}
+
+.cvItem p {
+  font-size: 15px;
+}
+
+.cvItem5 .numberIcon {
+  padding: 0 32px;
+}
+
+.cvItem5 .numberIcon span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: violet;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #000;
+  color: var(--white-color);
+}
+
+/* scope item  */
+.cvItem.cvItem2 ul {
+  display: flex;
+}
+
+.cvItem.cvItem2 li {
+  display: block;
+}
+
+.cvItem.cvItem2 li h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.cvItem.cvItem2 li p {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .cvItem.cvItem3 li {
+    width: 100%;
+  }
+
+  .cvItem.cvItem2 li {
+    display: block;
+    width: 100%;
+  }
+
+  .cvItem.cvItem2 ul {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .digital-cv .main {
+    display: block;
+  }
+
+  /* team  */
+  .cvItem.cvItem3 ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

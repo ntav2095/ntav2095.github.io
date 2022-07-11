@@ -1,0 +1,30 @@
+@media screen and (min-width: 992px) {
+  #job-info>div {
+    height: 1045px;
+  }
+
+  #job-info>div>div {
+    width: 33.33%;
+    padding: 8px;
+  }
+
+  .certificateContent h3 {
+    padding-top: 0px;
+  }
+
+  .certificateItem:first-child .certificateContent::after {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1060px) {
+  #job-info>div {
+    height: 1000px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #job-info>div {
+    height: 910px;
+  }
+}
